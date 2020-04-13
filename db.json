@@ -23,6 +23,12 @@
       "last": "SMS",
       "company": "SMS IS hell",
       "id": 4
+    },
+    {
+      "first": "Mohamed",
+      "last": "Amine",
+      "company": "ECOLE SUPERIEUR PRIVEE D'INGENIERIE DE TECHNOLOGIES",
+      "id": 5
     }
   ],
   "comments": [
@@ -50,6 +56,11 @@
       "postId": "4",
       "body": "I worked there , I confirm",
       "id": 5
+    },
+    {
+      "postId": "1",
+      "body": "yuhu!",
+      "id": 6
     }
   ],
   "profile": {
