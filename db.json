@@ -1,0 +1,58 @@
+{
+  "posts": [
+    {
+      "first": "Amine Chatteli",
+      "last": "Addiction",
+      "company": "Addiction Is pretty bad",
+      "id": 1
+    },
+    {
+      "first": "Brown Graphics",
+      "last": "Photoshop",
+      "company": "PhotoShop is easy",
+      "id": 2
+    },
+    {
+      "first": "Omar Karaa",
+      "last": "Turkey",
+      "company": "Turkey sucks",
+      "id": 3
+    },
+    {
+      "first": "Raed Aamri",
+      "last": "SMS",
+      "company": "SMS IS hell",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "postId": "1",
+      "body": "Yes Indeed, addiction is bad",
+      "id": 1
+    },
+    {
+      "postId": "1",
+      "body": "True That!",
+      "id": 2
+    },
+    {
+      "postId": "2",
+      "body": "I wanna learn it! ",
+      "id": 3
+    },
+    {
+      "postId": "2",
+      "body": "I just started working with it",
+      "id": 4
+    },
+    {
+      "postId": "4",
+      "body": "I worked there , I confirm",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
