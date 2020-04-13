@@ -40,10 +40,10 @@ window.onload=function(){
 
 document.querySelector('#myform').addEventListener('submit',function(e){
     e.preventDefault();
-    var first=document.querySelector('input[name="first"]').value;
-    var last=document.querySelector('input[name="last"]').value;
-    var company=document.querySelector('input[name="company"]').value;
-    var data ='first='+first+'&last='+last+'&company='+company
+    var name=document.querySelector('input[name="name"]').value;
+    var topic=document.querySelector('input[name="topic"]').value;
+    var post=document.querySelector('input[name="post"]').value;
+    var data ='name='+name+'&topic='+topic+'&post='+post;
     console.log(data);
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
@@ -81,8 +81,8 @@ document.querySelector('input[name="searchbar"]').addEventListener('keyup',funct
         if(xhr.readyState===4){
             var obj=JSON.parse(xhr.response)
             for(let i=0;i<obj.length;i++){
-                    html+='id: '+obj[i].id+'<br>'+'first name : '+obj[i].first+'<br>'+'last name: '+obj[i].last+'<br>'
-                    +'Company: '+obj[i].company+'<br>';
+                    html+='id: '+obj[i].id+'<br>'+'Name : '+obj[i].name+'<br>'+'Topic: '+obj[i].topic+'<br>'
+                    +'Post: '+obj[i].post+'<br>';
             }      
             searchResult.innerHTML=html;
         }

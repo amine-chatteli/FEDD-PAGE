@@ -1,65 +1,53 @@
 {
   "posts": [
     {
-      "first": "Amine Chatteli",
-      "last": "Addiction",
-      "company": "Addiction Is pretty bad",
-      "id": 1
+      "id": 1,
+      "name": "Amine Chatteli",
+      "topic": "First Job!! very excited ",
+      "post": "I just got my new job as a react developer, I really like it in here, friendly people!"
     },
     {
-      "first": "Brown Graphics",
-      "last": "Photoshop",
-      "company": "PhotoShop is easy",
+      "name": "Jhon Doe",
+      "topic": "Facebook Security",
+      "post": "Facebook is having major security problems that can cost millions of dollars",
       "id": 2
     },
     {
-      "first": "Omar Karaa",
-      "last": "Turkey",
-      "company": "Turkey sucks",
+      "name": "Donald Trump",
+      "topic": "CNN",
+      "post": "FAKE NEWWWSSS !!!!",
       "id": 3
-    },
-    {
-      "first": "Raed Aamri",
-      "last": "SMS",
-      "company": "SMS IS hell",
-      "id": 4
-    },
-    {
-      "first": "Mohamed",
-      "last": "Amine",
-      "company": "ECOLE SUPERIEUR PRIVEE D'INGENIERIE DE TECHNOLOGIES",
-      "id": 5
     }
   ],
   "comments": [
     {
-      "postId": "1",
-      "body": "Yes Indeed, addiction is bad",
-      "id": 1
+      "id": 1,
+      "body": "Congrats mate! wish you all the best!! <3<3<3",
+      "postId": 1
     },
     {
       "postId": "1",
-      "body": "True That!",
+      "body": "I knew you can do it! congrats bro!",
       "id": 2
     },
     {
       "postId": "2",
-      "body": "I wanna learn it! ",
+      "body": "@jhon Doe: yeah they should step up  their game",
       "id": 3
     },
     {
       "postId": "2",
-      "body": "I just started working with it",
+      "body": "I don't like facebook anyway!\n",
       "id": 4
     },
     {
-      "postId": "4",
-      "body": "I worked there , I confirm",
+      "postId": "3",
+      "body": "well, I can't see any other news!",
       "id": 5
     },
     {
-      "postId": "1",
-      "body": "yuhu!",
+      "postId": "3",
+      "body": "@Donald Trump , Mexico is a great country!",
       "id": 6
     }
   ],

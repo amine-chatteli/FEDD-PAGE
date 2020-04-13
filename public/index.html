@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <title>JSON AND AJAX</title>
 </head>
 <body>
-    <div id="message"></div>
+    <div id="message" ></div>
     <div id="displayComments"></div>
-
 <br><br><br><br><br>
 <div id="pageInfo"></div>
 <button id="prev">prev</button>
 <button id="next">next</button><br><br><br><b></br>
 <form id="myform">
-    <input type="text" name="first" placeholder="Full Name">
-    <input type="text" name="last" placeholder="Post Topic">
-    <input type="text" name="company" placeholder="Post Body">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="topic" placeholder="Post Topic">
+    <input type="text" name="post" placeholder="Post Body">
     <input type="submit" value="send data">
 </form><br><br><br><b></br>
     <textarea name="" id="comments" cols="30" rows="10"></textarea><br>
@@ -24,6 +24,8 @@
     <br><br><br><b></br>
 <input type="text" name="searchbar"><button class="btn" id="search">search</button>
 <div id="search-result"></div>
+<script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
