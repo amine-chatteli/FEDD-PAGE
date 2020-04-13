@@ -26,9 +26,8 @@ window.onload=function(){
     xhr.onreadystatechange=function(){
         if(xhr.readyState===4){ 
             var obj=JSON.parse(xhr.response)
-           for( var key in obj[0]){
-            html+='<b>'+key+' :</b> '+obj[0][key]+'<br>'
-           }        
+            let html='<b>Name: </b>'+obj[0].name+'<b><br>Topic: </b>'+obj[0].topic+'<br><b>Post </b>:'+obj[0].post;
+                  
            message.innerHTML=html
         }
     }
@@ -81,7 +80,7 @@ document.querySelector('input[name="searchbar"]').addEventListener('keyup',funct
         if(xhr.readyState===4){
             var obj=JSON.parse(xhr.response)
             for(let i=0;i<obj.length;i++){
-                    html+='id: '+obj[i].id+'<br>'+'Name : '+obj[i].name+'<br>'+'Topic: '+obj[i].topic+'<br>'
+                    html+='Name : '+obj[i].name+'<br>'+'Topic: '+obj[i].topic+'<br>'
                     +'Post: '+obj[i].post+'<br>';
             }      
             searchResult.innerHTML=html;
@@ -103,14 +102,15 @@ function loadPage(){
         document.querySelector('#prev').style.display='none';
     }
    
-    var html=''
+    
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4){ 
+        if(xhr.readyState===4 && xhr.status===200){ 
             var obj=JSON.parse(xhr.response)
-           for( var key in obj[0]){
-            html+='<b>'+key+' :</b> '+obj[0][key]+'<br>'
-           }        
+           
+             
+            let html='<b>Name: </b>'+obj[0].name+'<b><br>Topic: </b>'+obj[0].topic+'<br><b>Post </b>:'+obj[0].post;
+                  
            message.innerHTML=html
         }
     }

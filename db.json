@@ -6,17 +6,17 @@
       "topic": "First Job!! very excited ",
       "post": "I just got my new job as a react developer, I really like it in here, friendly people!"
     },
-    {
+    {"id": 2,
       "name": "Jhon Doe",
       "topic": "Facebook Security",
-      "post": "Facebook is having major security problems that can cost millions of dollars",
-      "id": 2
+      "post": "Facebook is having major security problems that can cost millions of dollars"
+      
     },
-    {
+    { "id": 3,
       "name": "Donald Trump",
       "topic": "CNN",
-      "post": "FAKE NEWWWSSS !!!!",
-      "id": 3
+      "post": "FAKE NEWWWSSS !!!!"
+      
     }
   ],
   "comments": [
