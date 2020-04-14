@@ -24,9 +24,10 @@ window.onload=function(){
     var html=''
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4){ 
+        if(xhr.readyState==4){ 
             var obj=JSON.parse(xhr.response)
-            let html='<b>Name: </b>'+obj[0].name+'<b><br>Topic: </b>'+obj[0].topic+'<br><b>Post </b>:'+obj[0].post;
+            let html='<p class="post-top-style lead"><b>Name: </b>'+obj[0].name+'<b><br>Topic: </b>'
+            +obj[0].topic+'<br></p><p class="post-style lead">'+obj[0].post+'</p>';
                   
            message.innerHTML=html
         }
@@ -41,12 +42,12 @@ document.querySelector('#myform').addEventListener('submit',function(e){
     e.preventDefault();
     var name=document.querySelector('input[name="name"]').value;
     var topic=document.querySelector('input[name="topic"]').value;
-    var post=document.querySelector('input[name="post"]').value;
+    var post=document.querySelector('textarea[name="post"]').value;
     var data ='name='+name+'&topic='+topic+'&post='+post;
     console.log(data);
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4){
+        if(xhr.readyState==4){
             console.log(xhr.response);
         }
     }
@@ -61,7 +62,7 @@ document.querySelector('#addcomment').addEventListener('click',function(){
     console.log(data);
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4){
+        if(xhr.readyState==4){
             loadComments()
         }
     }
@@ -77,13 +78,18 @@ document.querySelector('input[name="searchbar"]').addEventListener('keyup',funct
     var search=document.querySelector('input[name="searchbar"]').value;
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4){
+        if(xhr.readyState==4){
             var obj=JSON.parse(xhr.response)
             for(let i=0;i<obj.length;i++){
                     html+='Name : '+obj[i].name+'<br>'+'Topic: '+obj[i].topic+'<br>'
                     +'Post: '+obj[i].post+'<br>';
             }      
             searchResult.innerHTML=html;
+            searchResult.classList=' search-result search-result-style'
+            if(search===''){
+                searchResult.innerHTML='';
+                searchResult.classList=' search-result'
+            }
         }
     }
     xhr.open('GET','http://localhost:3004/posts?q='+search,true)
@@ -105,29 +111,29 @@ function loadPage(){
     
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4 && xhr.status===200){ 
+        if(xhr.readyState==4){ 
             var obj=JSON.parse(xhr.response)
-           
-             
-            let html='<b>Name: </b>'+obj[0].name+'<b><br>Topic: </b>'+obj[0].topic+'<br><b>Post </b>:'+obj[0].post;
-                  
+            let html='<p class="post-top-style lead"><b>Name: </b>'+obj[0].name+'<b><br>Topic: </b>'
+            +obj[0].topic+'<br></p><p class="post-style lead">'+obj[0].post+'</p>';
+                                    
            message.innerHTML=html
         }
     }
     xhr.open('GET','http://localhost:3004/posts?id='+currentId,true)
     
     xhr.send()
-    check()
+    
     loadComments()
 }
 function loadComments(){
     var html=''
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4){ 
+        if(xhr.readyState==4){ 
             var obj=JSON.parse(xhr.response)
            for( var key in obj){
-            html+='<b>Comment :</b> '+obj[key].body+'<br>'
+            html+=`<ul class="comments-style lead"><li><span class="one-word">Comment:</span> ${obj[key].body}</li></ul>`
+            
            }        
            displayComments.innerHTML=html
         }
@@ -144,7 +150,7 @@ function loadComments(){
 function makeGet(url){
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4){
+        if(xhr.readyState==4){
             console.log(xhr.response);
             
         message.innerHTML=JSON.stringify(xhr.response);
@@ -158,9 +164,8 @@ function makeGet(url){
    function check(url,data){
     var xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4){ 
+        if(xhr.readyState==4){ 
             var obj=JSON.parse(xhr.response)
-            
            if( currentId<obj.length){
             loadPage();
            }
@@ -168,8 +173,6 @@ function makeGet(url){
             loadPage();
             document.querySelector('#next').style.display='none';  
            }
-          
-           
         }
     }
     xhr.open('GET','http://localhost:3004/posts',true)

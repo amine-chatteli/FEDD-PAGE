@@ -1,0 +1,69 @@
+
+body {
+ background-color: whitesmoke;
+  }
+.search-result-style{
+    padding: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid royalblue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.message-style{
+    margin: 40px auto;
+    width: 30%;
+    height: 300px;
+    border: 1px solid royalblue;
+    border-radius: 5px;
+    text-align: center;
+}
+.post-style{
+    margin-top:70px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 400;
+}
+.post-top-style{
+    padding-top: 30px;
+}
+.comments-style{
+    list-style: none;
+    width: 30%;
+    margin: 25px auto;
+    text-align: left;
+}
+.one-word{
+    font-weight: 400;
+}
+.adding-comments{
+    
+    width: 30%;
+    margin: 40px auto;
+    text-align: center;
+}
+.custom-buttons{
+    width:120px;
+    height: 50px;
+    text-align: center;
+    transition: 1s;
+    border-radius: 40px;
+    border: 2px solid rgba(3, 38, 102, 0.363);
+}
+.custom-buttons:hover{
+    background-color: rgb(73, 160, 214);
+    transition: 1s;
+}
+
+.navigate{
+    width: 30%;
+    margin: 20px auto;
+    padding-left: 230px;
+}
+#myform{
+    width: 30%;
+    margin: 20px auto;
+}

@@ -6,17 +6,29 @@
       "topic": "First Job!! very excited ",
       "post": "I just got my new job as a react developer, I really like it in here, friendly people!"
     },
-    {"id": 2,
+    {
+      "id": 2,
       "name": "Jhon Doe",
       "topic": "Facebook Security",
       "post": "Facebook is having major security problems that can cost millions of dollars"
-      
     },
-    { "id": 3,
+    {
+      "id": 3,
       "name": "Donald Trump",
       "topic": "CNN",
       "post": "FAKE NEWWWSSS !!!!"
-      
+    },
+    {
+      "name": "Jhon",
+      "topic": "Oliver",
+      "post": "Last week Tonight is on!!",
+      "id": 4
+    },
+    {
+      "name": "Richard Dawkings",
+      "topic": "Coronavirus",
+      "post": "Coronavirus is a real threat, we should mobilize",
+      "id": 5
     }
   ],
   "comments": [
@@ -49,6 +61,41 @@
       "postId": "3",
       "body": "@Donald Trump , Mexico is a great country!",
       "id": 6
+    },
+    {
+      "postId": "1",
+      "body": "Go get em!!",
+      "id": 7
+    },
+    {
+      "postId": "2",
+      "body": "Facebook!!!!",
+      "id": 8
+    },
+    {
+      "postId": "3",
+      "body": "RUSSIAN PRESIDENT!!",
+      "id": 9
+    },
+    {
+      "postId": "1",
+      "body": "I've worked there, it's a great company!",
+      "id": 10
+    },
+    {
+      "postId": "4",
+      "body": "Great show! You're very funny!!",
+      "id": 11
+    },
+    {
+      "postId": "4",
+      "body": "Love you jhon!",
+      "id": 12
+    },
+    {
+      "postId": "5",
+      "body": "#STAY HOME!!",
+      "id": 13
     }
   ],
   "profile": {

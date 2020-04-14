@@ -4,28 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
     <title>JSON AND AJAX</title>
 </head>
 <body>
-    <div id="message" ></div>
+    <nav class="navbar navbar-expand-md navbar-light bg-info justify-content-start">
+        <a href="/" class="navbar-brand">Search Posts</a>
+        <button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbar6" id="search">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar6">
+            <form class="mx-2 my-auto d-inline w-100">
+                <input type="text" name="searchbar" class="form-control border border-right-0" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+    
+<div id="search-result" class="lead">
+</div>
+
+
+
+    <div id="message" class="message-style"></div>
     <div id="displayComments"></div>
-<br><br><br><br><br>
+<div class="adding-comments">
+    <textarea placeholder="Add comment"  id="comments" cols="30" rows="1"  class="form-control"></textarea><br>
+<button id="addcomment" class="btn btn-primary">add comment</button>
+</div>
+
+
 <div id="pageInfo"></div>
-<button id="prev">prev</button>
-<button id="next">next</button><br><br><br><b></br>
-<form id="myform">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="topic" placeholder="Post Topic">
-    <input type="text" name="post" placeholder="Post Body">
-    <input type="submit" value="send data">
-</form><br><br><br><b></br>
-    <textarea name="" id="comments" cols="30" rows="10"></textarea><br>
-    <button id="addcomment">add comment</button>
-    <br><br><br><b></br>
-<input type="text" name="searchbar"><button class="btn" id="search">search</button>
-<div id="search-result"></div>
+<div class="navigate">
+    <button id="prev" class="custom-buttons">prev</button>
+    <button id="next" class="custom-buttons ">next</button>
+</div>
+   
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" id="myform">
+    <p class="h4 mb-4">Add a new post</p>
+    <!-- Name -->
+    <input type="text" name="name" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+    <!-- Topic -->
+    <input type="text" id="defaultContactFormEmail" name="topic" class="form-control mb-4" placeholder="Post Topic">
+    <!-- Message -->
+    <div class="form-group">
+        <textarea class="form-control rounded-0" name="post" id="exampleFormControlTextarea2" rows="3" placeholder="Post Content"></textarea>
+    </div>
+    <input type="submit" value="Post!" class="btn btn-info btn-block">
+</form>
+
 <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-    <script src="./js/script.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>
