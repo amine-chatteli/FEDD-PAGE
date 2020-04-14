@@ -1,2 +1,2 @@
 # FEDD-PAGE
-A feed page with vanilla js !
+A feed page with vanilla js and Ajax !
